@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`getData Корректное значение 1`] = `
+[
+  "Sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+  "Qui est esse",
+  "Ea molestias quasi exercitationem repellat qui ipsa sit aut",
+]
+`;
