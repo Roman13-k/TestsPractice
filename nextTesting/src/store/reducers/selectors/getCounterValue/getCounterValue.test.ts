@@ -1,8 +1,9 @@
+import { RootState } from "@/store/store";
 import { getCounterValue } from "./getCounterValue";
 
 describe("getCounterValue", () => {
   test("test witch empty value", () => {
-    expect(getCounterValue({} as any)).toBe(0);
+    expect(getCounterValue({} as RootState)).toBe(0);
   });
 
   test("test with field value", () => {

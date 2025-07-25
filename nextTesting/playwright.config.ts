@@ -1,8 +1,5 @@
 import { defineConfig, devices } from "@playwright/test";
 
-/**
- * See https://playwright.dev/docs/test-configuration.
- */
 export default defineConfig({
   testDir: "./src/e2e/",
   /* Run tests in files in parallel */
@@ -38,15 +35,14 @@ export default defineConfig({
       use: { ...devices["Desktop Safari"] },
     },
 
-    /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
-    // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
+    {
+      name: "Mobile Chrome",
+      use: { ...devices["Pixel 5"] },
+    },
+    {
+      name: "Mobile Safari",
+      use: { ...devices["iPhone 12"] },
+    },
 
     /* Test against branded browsers. */
     // {
@@ -59,10 +55,9 @@ export default defineConfig({
     // },
   ],
 
-  /* Run your local dev server before starting the tests */
   // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://localhost:3000',
+  //   command: "npm run start",
+  //   url: "http://localhost:3000",
   //   reuseExistingServer: !process.env.CI,
   // },
 });

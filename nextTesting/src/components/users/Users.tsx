@@ -30,7 +30,7 @@ export default function Users() {
         // <Link href={`/users/${user.id}`} key={user.id} data-testid='user-el'>
         //   {user.name}
         // </Link>
-        <button data-testid='user-el' onClick={() => deleteUserById(user.id)}>
+        <button key={user.id} data-testid='user-el' onClick={() => deleteUserById(user.id)}>
           {user.name}
         </button>
       ))}

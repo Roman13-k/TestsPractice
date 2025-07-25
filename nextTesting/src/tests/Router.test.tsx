@@ -3,7 +3,6 @@ import userEvent from "@testing-library/user-event";
 import HomeScreen from "@/components/HomeScreen";
 import mockRouter from "next-router-mock";
 import NotFound from "@/app/not-found";
-import UserPage from "@/app/users/[id]/page";
 
 describe("Router navigation", () => {
   beforeEach(() => {

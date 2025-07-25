@@ -1,11 +1,14 @@
 import { render, screen } from "@testing-library/react";
 import axios from "axios";
 import Users, { User } from "./Users";
-import userEvent from "@testing-library/user-event";
 import mockRouter from "next-router-mock";
 import UserPage from "@/app/users/[id]/page";
 
-jest.mock("next/router", () => require("next-router-mock"));
+jest.mock("next/router", () => ({
+  __esModule: true,
+  default: mockRouter,
+}));
+
 jest.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
