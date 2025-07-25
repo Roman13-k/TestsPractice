@@ -20,12 +20,19 @@ export default function Users() {
     loadUsers();
   }, []);
 
+  const deleteUserById = (id: number) => {
+    setUsers((prev) => prev.filter((user) => user.id !== id));
+  };
+
   return (
     <div>
       {users.map((user) => (
-        <Link href={`/users/${user.id}`} key={user.id} data-testid='user-el'>
+        // <Link href={`/users/${user.id}`} key={user.id} data-testid='user-el'>
+        //   {user.name}
+        // </Link>
+        <button data-testid='user-el' onClick={() => deleteUserById(user.id)}>
           {user.name}
-        </Link>
+        </button>
       ))}
     </div>
   );

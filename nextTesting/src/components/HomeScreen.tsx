@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import Counter from "./counter/Counter";
+import ToggleText from "./ToggleText";
 
 export default function HomeScreen() {
   return (
@@ -20,6 +21,7 @@ export default function HomeScreen() {
         </Link>
       </div>
       <Counter />
+      <ToggleText />
     </div>
   );
 }
